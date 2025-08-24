@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="./style.css" />
 
     <script>
-       
+
         function checkPassword() {
             let password = document.getElementById("password").value;
 
             // List of valid passwords
-            let validPasswords = ["6387879284", "8090251319";
+            let validPasswords = ["6387879284", "8090251319"];
 
             if (validPasswords.includes(password)) {
                 document.getElementById("protected-content").style.display = "block";
@@ -24,8 +24,9 @@
             }
         }
 
-    // Generate random floating flowers
-        /*  window.onload = function () {
+
+        // Generate random floating flowers
+        window.onload = function () {
             for (let i = 0; i < 12; i++) {
                 let flower = document.createElement("div");
                 flower.classList.add("flower");
@@ -35,25 +36,15 @@
                 document.body.appendChild(flower);
             }
         }
-  */
+
 
     </script>
 
 </head>
 
 <body>
-    
     <div id="login-box">
         <style>
-
-            body {
-                margin: 0;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-        }
             #login-box {
                 background: rgba(236, 174, 174, 0.6);
                 padding: 30px;
@@ -93,16 +84,12 @@
             #protected-content {
                 text-align: center;
             }
-            
-
-      
         </style>
         <h2>If it open from your phone number, then it is for you 🤗</h2>
         <center> <input type="password" id="password" placeholder="enter your phone number">
             <button onclick="checkPassword()">Submit</button>
         </center>
     </div>
-    <center>
 
     <div id="protected-content" style="display:none;">
 
@@ -124,7 +111,8 @@
         </div>
 
     </div>
-        </center>
 </body>
 
 </html>
+
+<!-- hjhj -->
