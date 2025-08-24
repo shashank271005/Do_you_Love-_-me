@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="./style.css" />
 
     <script>
+       
         function checkPassword() {
             let password = document.getElementById("password").value;
 
-            // Set your password here
-            let correctPassword = "27102005";
+            // List of valid passwords
+            let validPasswords = ["27102005", "15082004", "01012000"];
 
-            if (password === correctPassword) {
+            if (validPasswords.includes(password)) {
                 document.getElementById("protected-content").style.display = "block";
                 document.getElementById("login-box").style.display = "none";
             } else {
@@ -96,8 +97,8 @@
 
       
         </style>
-        <h2>If it open from your birth-date, then it is for you 🤗</h2>
-        <center> <input type="password" id="password" placeholder="ddmmyyyy">
+        <h2>If it open from your phone number, then it is for you 🤗</h2>
+        <center> <input type="password" id="password" placeholder="enter your phone number">
             <button onclick="checkPassword()">Submit</button>
         </center>
     </div>
