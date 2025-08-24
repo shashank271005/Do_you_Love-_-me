@@ -1,39 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    	<link rel="icon" href="favicon.ico">
     <title>Ask Her Out</title>
 
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div
-        class="tenor-gif-embed"
-        data-postid="22885016"
-        data-share-method="host"
-        data-aspect-ratio="1.04918"
-        data-width="100%"
-      >
-        <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a
-        >from
-        <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
-      </div>
-      <script
-        type="text/javascript"
-        async
-        src="https://tenor.com/embed.js"
-      ></script>
-      <h1>Do you love me? 🤗</h1>
-      <p>I am all yours</p>
 
-      <div class="btn">
-        <a href='yes.html'>Yes</a>
-        <a href='no1.html'>No</a>
-      </div>
+    <script>
+        function checkPassword() {
+            let password = document.getElementById("password").value;
+
+            // Set your password here
+            let correctPassword = "27102005";
+
+            if (password === correctPassword) {
+                document.getElementById("protected-content").style.display = "block";
+                document.getElementById("login-box").style.display = "none";
+            } else {
+                alert("Incorrect Password!");
+            }
+        }
+
+        // Generate random floating flowers
+        window.onload = function () {
+            for (let i = 0; i < 12; i++) {
+                let flower = document.createElement("div");
+                flower.classList.add("flower");
+                flower.style.left = Math.random() * 100 + "vw";
+                flower.style.animationDuration = (6 + Math.random() * 6) + "s";
+                flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
+                document.body.appendChild(flower);
+            }
+        }
+
+
+    </script>
+
+</head>
+
+<body>
+    <div id="login-box">
+        <style>
+            #login-box {
+                background: rgba(236, 174, 174, 0.6);
+                padding: 30px;
+                border-radius: 15px;
+                text-align: center;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+
+            input[type="password"] {
+                padding: 12px;
+                width: 250px;
+                border: none;
+                border-radius: 8px;
+                margin: 10px 0;
+                font-size: 16px;
+                outline: none;
+                text-align: center;
+            }
+
+            button {
+                padding: 12px 25px;
+                border: none;
+                border-radius: 8px;
+                background: #ff9800;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            button:hover {
+                background: #e68900;
+                transform: scale(1.05);
+            }
+
+            #protected-content {
+                text-align: center;
+            }
+
+      
+        </style>
+        <h2>If it open from your birth-date, then it is for you 🤗</h2>
+        <center> <input type="password" id="password" placeholder="ddmmyyyy">
+            <button onclick="checkPassword()">Submit</button>
+        </center>
+    </div>
+
+    <div id="protected-content" style="display:none;">
+
+        <div class="container">
+            <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
+                data-width="100%">
+                <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
+                <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
+            </div>
+            <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+            <h1>Do you love me? 🤗</h1>
+            <p>I am all yours</p>
+
+            <div class="btn">
+                <a href='yes.html'>Yes</a>
+                <a href='no1.html'>No</a>
+            </div>
+
+        </div>
 
     </div>
-  </body>
+</body>
+
 </html>
