@@ -7,6 +7,22 @@
     <title>Ask Her Out</title>
 
     <link rel="stylesheet" href="./yesstyle.css" />
+     <script>
+
+        // Generate random floating flowers
+           window.onload = function () {
+            for (let i = 0; i < 12; i++) {
+                let flower = document.createElement("div");
+                flower.classList.add("flower");
+                flower.style.left = Math.random() * 100 + "vw";
+                flower.style.animationDuration = (6 + Math.random() * 6) + "s";
+               flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
+                document.body.appendChild(flower);
+            }
+        }
+
+
+    </script>
   </head>
   <body>
     <div class="container">
