@@ -70,3 +70,32 @@
     list-style: none;
     
   }
+
+
+        /* Floating flowers animation */
+            .flower {
+                position: absolute;
+                bottom: -50px;
+                width: 30px;
+                height: 30px;
+                background: url('https://res.cloudinary.com/dkdstxw96/image/upload/v1756032210/heartpng_paoaea.png') no-repeat center/cover;
+                animation: floatUp 10s linear infinite;
+                opacity: 0.8;
+
+            }
+
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) rotate(0deg);
+                    opacity: 0.8;
+                }
+
+                50% {
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(-120vh) rotate(360deg);
+                    opacity: 0;
+                }
+            }
