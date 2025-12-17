@@ -49,7 +49,7 @@
 
       <div class="btn">
 
-        <!-- YES BUTTON WITH FORM (NO CONFIRMATION) -->
+        <!-- YES BUTTON (FORM + SAME CLASS STYLING) -->
         <form
           action="https://formspree.io/f/mdkqqrly"
           method="POST"
@@ -62,14 +62,13 @@
             value="She clicked YES (final page) ❤️"
           />
           <input type="hidden" name="time" id="yes-time" />
-
-          <!-- REDIRECT AFTER SUBMIT -->
           <input type="hidden" name="_redirect" value="yes.html" />
 
-          <button type="submit">Yes</button>
+          <!-- CLASS ADDED SO CSS APPLIES -->
+          <button type="submit" class="yes">Yes</button>
         </form>
 
-        <!-- NO BUTTON (MOVES RANDOMLY) -->
+        <!-- NO BUTTON (MOVING) -->
         <a href="#" id="move-random">No</a>
       </div>
     </div>
