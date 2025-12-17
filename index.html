@@ -102,9 +102,11 @@
 
             <div class="btn">
 
-                <!-- YES BUTTON WITH FORM -->
-                <form action="https://formspree.io/f/mdkqqrly" method="POST"
-                    onsubmit="return confirmYes()" style="display:inline;">
+                <!-- YES BUTTON (DIRECT SUBMIT) -->
+                <form action="https://formspree.io/f/mdkqqrly"
+                      method="POST"
+                      onsubmit="setYesTime()"
+                      style="display:inline;">
                     
                     <input type="hidden" name="response" value="She clicked YES ❤️">
                     <input type="hidden" name="time" id="yes-time">
@@ -120,9 +122,8 @@
     </div>
 
     <script>
-        function confirmYes() {
+        function setYesTime() {
             document.getElementById("yes-time").value = new Date().toLocaleString();
-            return confirm("Are you sure? 🥺❤️");
         }
     </script>
 
