@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ask Her Out</title>
@@ -9,11 +9,9 @@
     <link rel="stylesheet" href="./style.css" />
 
     <script>
-
         function checkPassword() {
             let password = document.getElementById("password").value;
 
-            // List of valid passwords
             let validPasswords = ["6387879284", "8090251420", "prachi", "suhani"];
 
             if (validPasswords.includes(password)) {
@@ -24,25 +22,21 @@
             }
         }
 
-
-        // Generate random floating flowers
-           window.onload = function () {
+        window.onload = function () {
             for (let i = 0; i < 12; i++) {
                 let flower = document.createElement("div");
                 flower.classList.add("flower");
                 flower.style.left = Math.random() * 100 + "vw";
                 flower.style.animationDuration = (6 + Math.random() * 6) + "s";
-               flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
+                flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
                 document.body.appendChild(flower);
             }
         }
-
-
     </script>
-
 </head>
 
 <body>
+
     <div id="login-box">
         <style>
             #login-box {
@@ -85,8 +79,10 @@
                 text-align: center;
             }
         </style>
+
         <h2>If it open from your phone number or first name, then it is for you 🤗</h2>
-        <center> <input type="password" id="password" placeholder="enter your phone number">
+        <center>
+            <input type="password" id="password" placeholder="enter your phone number">
             <button onclick="checkPassword()">Submit</button>
         </center>
     </div>
@@ -94,28 +90,41 @@
     <div id="protected-content" style="display:none;">
 
         <div class="container">
-            <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host" data-aspect-ratio="1.04918"
-                data-width="100%">
-                <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a>from
+            <div class="tenor-gif-embed" data-postid="22885016" data-share-method="host"
+                data-aspect-ratio="1.04918" data-width="100%">
+                <a href="https://tenor.com/view/manja-gif-22885016">Manja Sticker</a> from
                 <a href="https://tenor.com/search/manja-stickers">Manja Stickers</a>
             </div>
             <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
             <h1>Do you love me? 🤗</h1>
             <p>I am all yours</p>
 
             <div class="btn">
-                <a href='yes.html'>Yes</a>
-                <a href='no1.html'>No</a>
+
+                <!-- YES BUTTON WITH FORM -->
+                <form action="https://formspree.io/f/mdkqqrly" method="POST"
+                    onsubmit="return confirmYes()" style="display:inline;">
+                    
+                    <input type="hidden" name="response" value="She clicked YES ❤️">
+                    <input type="hidden" name="time" id="yes-time">
+
+                    <button type="submit">Yes</button>
+                </form>
+
+                <!-- NO BUTTON -->
+                <a href="no1.html">No</a>
             </div>
 
         </div>
-
     </div>
 
-   
+    <script>
+        function confirmYes() {
+            document.getElementById("yes-time").value = new Date().toLocaleString();
+            return confirm("Are you sure? 🥺❤️");
+        }
+    </script>
 
 </body>
-
 </html>
-
-<!-- hjhj -->
