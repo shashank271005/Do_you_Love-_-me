@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,25 +7,22 @@
 
     <link rel="stylesheet" href="./no3style.css" />
 
-     <script>
-
-        // Generate random floating flowers
-           window.onload = function () {
-            for (let i = 0; i < 12; i++) {
-                let flower = document.createElement("div");
-                flower.classList.add("flower");
-                flower.style.left = Math.random() * 100 + "vw";
-                flower.style.animationDuration = (6 + Math.random() * 6) + "s";
-               flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
-                document.body.appendChild(flower);
-            }
+    <script>
+      window.onload = function () {
+        for (let i = 0; i < 12; i++) {
+          let flower = document.createElement("div");
+          flower.classList.add("flower");
+          flower.style.left = Math.random() * 100 + "vw";
+          flower.style.animationDuration = (6 + Math.random() * 6) + "s";
+          flower.style.width = flower.style.height =
+            20 + Math.random() * 30 + "px";
+          document.body.appendChild(flower);
         }
-
-
+      };
     </script>
   </head>
+
   <body>
-    
     <div class="container">
       <div
         class="tenor-gif-embed"
@@ -35,13 +31,11 @@
         data-aspect-ratio="1.26923"
         data-width="100%"
       >
-        <a
-          href="Asking her/gif1.gif"
-          >Peach Goma Phone Sticker</a
-        >from
-        <a href="https://tenor.com/search/peach+goma-stickers"
-          >Peach Goma Stickers</a
-        >
+        <a href="Asking her/gif1.gif">Peach Goma Phone Sticker</a>
+        from
+        <a href="https://tenor.com/search/peach+goma-stickers">
+          Peach Goma Stickers
+        </a>
       </div>
 
       <script
@@ -54,11 +48,37 @@
       <p>bhut glt baat hai yaar😭</p>
 
       <div class="btn">
-        <a href='yes.html'>Yes</a>
+
+        <!-- YES BUTTON WITH FORM -->
+        <form
+          action="https://formspree.io/f/mdkqqrly"
+          method="POST"
+          onsubmit="setYesTime()"
+          style="display:inline;"
+        >
+          <input
+            type="hidden"
+            name="response"
+            value="She clicked YES (from final no page 😭) ❤️"
+          />
+          <input type="hidden" name="time" id="yes-time" />
+
+          <button type="submit">Yes</button>
+        </form>
+
+        <!-- NO BUTTON (MOVES RANDOMLY) -->
         <a href="#" id="move-random">No</a>
       </div>
     </div>
 
+    <script>
+      function setYesTime() {
+        document.getElementById("yes-time").value =
+          new Date().toLocaleString();
+      }
+    </script>
+
     <script src="no3script.js"></script>
   </body>
 </html>
+
