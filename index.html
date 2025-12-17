@@ -14,7 +14,7 @@
             let password = document.getElementById("password").value;
 
             // List of valid passwords
-            let validPasswords = ["6387879284", "8090251320", "prachi", "suhani"];
+            let validPasswords = ["6387879284", "8090251420", "prachi", "suhani"];
 
             if (validPasswords.includes(password)) {
                 document.getElementById("protected-content").style.display = "block";
@@ -85,7 +85,7 @@
                 text-align: center;
             }
         </style>
-        <h2>If it open from your phone number, then it is for you 🤗</h2>
+        <h2>If it open from your phone number or first name, then it is for you 🤗</h2>
         <center> <input type="password" id="password" placeholder="enter your phone number">
             <button onclick="checkPassword()">Submit</button>
         </center>
