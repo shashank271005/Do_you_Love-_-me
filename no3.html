@@ -19,6 +19,29 @@
           document.body.appendChild(flower);
         }
       };
+
+      // SUBMIT FORM WITHOUT PAGE CHANGE
+      function submitYes(event) {
+        event.preventDefault();
+
+        const formData = new FormData();
+        formData.append("response", "She clicked YES (final page) ❤️");
+        formData.append("time", new Date().toLocaleString());
+
+        fetch("https://formspree.io/f/mdkqqrly", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then(() => {
+            window.location.href = "yes.html";
+          })
+          .catch(() => {
+            window.location.href = "yes.html";
+          });
+      }
     </script>
   </head>
 
@@ -49,36 +72,13 @@
 
       <div class="btn">
 
-        <!-- YES BUTTON (FORM + SAME CLASS STYLING) -->
-        <form
-          action="https://formspree.io/f/mdkqqrly"
-          method="POST"
-          onsubmit="setYesTime()"
-          style="display:inline;"
-        >
-          <input
-            type="hidden"
-            name="response"
-            value="She clicked YES (final page) ❤️"
-          />
-          <input type="hidden" name="time" id="yes-time" />
-          <input type="hidden" name="_redirect" value="yes.html" />
+        <!-- YES BUTTON (CSS CLASS KEPT) -->
+        <button class="yes" onclick="submitYes(event)">Yes</button>
 
-          <!-- CLASS ADDED SO CSS APPLIES -->
-          <button type="submit" class="yes">Yes</button>
-        </form>
-
-        <!-- NO BUTTON (MOVING) -->
+        <!-- NO BUTTON -->
         <a href="#" id="move-random">No</a>
       </div>
     </div>
-
-    <script>
-      function setYesTime() {
-        document.getElementById("yes-time").value =
-          new Date().toLocaleString();
-      }
-    </script>
 
     <script src="no3script.js"></script>
   </body>
