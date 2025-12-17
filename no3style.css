@@ -33,7 +33,26 @@
     display: flex;
     gap: 25px;
   }
-  
+  .btn a,
+.btn button {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  background: #ff9800;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn a:hover,
+.btn button:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
   .btn a {
     text-decoration: none;
     color: #111;
