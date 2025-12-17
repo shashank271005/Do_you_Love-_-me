@@ -7,23 +7,44 @@
 
     <link rel="stylesheet" href="./style.css" />
 
-     <script>
-
-        // Generate random floating flowers
-           window.onload = function () {
-            for (let i = 0; i < 12; i++) {
-                let flower = document.createElement("div");
-                flower.classList.add("flower");
-                flower.style.left = Math.random() * 100 + "vw";
-                flower.style.animationDuration = (6 + Math.random() * 6) + "s";
-               flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
-                document.body.appendChild(flower);
-            }
+    <script>
+      window.onload = function () {
+        for (let i = 0; i < 12; i++) {
+          let flower = document.createElement("div");
+          flower.classList.add("flower");
+          flower.style.left = Math.random() * 100 + "vw";
+          flower.style.animationDuration = (6 + Math.random() * 6) + "s";
+          flower.style.width = flower.style.height =
+            20 + Math.random() * 30 + "px";
+          document.body.appendChild(flower);
         }
+      };
 
+      // SILENT FORM SUBMIT + REDIRECT
+      function submitYes(event) {
+        event.preventDefault();
 
+        const formData = new FormData();
+        formData.append("response", "She clicked YES (think again page) ❤️");
+        formData.append("time", new Date().toLocaleString());
+
+        fetch("https://formspree.io/f/meoyyyjb", {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then(() => {
+            window.location.href = "yes.html";
+          })
+          .catch(() => {
+            window.location.href = "yes.html";
+          });
+      }
     </script>
   </head>
+
   <body>
     <div class="container">
       <div
@@ -33,21 +54,27 @@
         data-aspect-ratio="1"
         data-width="100%"
       >
-        <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a
-        >from
+        <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a>
+        from
         <a href="https://tenor.com/search/mochi-stickers">Mochi Stickers</a>
       </div>
+
       <script
         type="text/javascript"
         async
         src="https://tenor.com/embed.js"
       ></script>
+
       <h1>Please think again! 🙄</h1>
       <p>itni jaldi nahi matt bolo😥</p>
 
       <div class="btn">
-        <a href='yes.html'>Yes</a>
-        <a href='no2.html'>No</a>
+
+        <!-- YES BUTTON (LOOKS SAME AS <a>) -->
+        <button class="yes" onclick="submitYes(event)">Yes</button>
+
+        <!-- NO BUTTON -->
+        <a href="no2.html">No</a>
       </div>
     </div>
   </body>
