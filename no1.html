@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,23 +7,21 @@
 
     <link rel="stylesheet" href="./style.css" />
 
-     <script>
-
-        // Generate random floating flowers
-           window.onload = function () {
-            for (let i = 0; i < 12; i++) {
-                let flower = document.createElement("div");
-                flower.classList.add("flower");
-                flower.style.left = Math.random() * 100 + "vw";
-                flower.style.animationDuration = (6 + Math.random() * 6) + "s";
-               flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
-                document.body.appendChild(flower);
-            }
+    <script>
+      window.onload = function () {
+        for (let i = 0; i < 12; i++) {
+          let flower = document.createElement("div");
+          flower.classList.add("flower");
+          flower.style.left = Math.random() * 100 + "vw";
+          flower.style.animationDuration = (6 + Math.random() * 6) + "s";
+          flower.style.width = flower.style.height =
+            20 + Math.random() * 30 + "px";
+          document.body.appendChild(flower);
         }
-
-
+      };
     </script>
   </head>
+
   <body>
     <div class="container">
       <div
@@ -34,22 +31,50 @@
         data-aspect-ratio="1"
         data-width="100%"
       >
-        <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a
-        >from
+        <a href="https://tenor.com/view/mochi-gif-22050818">Mochi Sticker</a>
+        from
         <a href="https://tenor.com/search/mochi-stickers">Mochi Stickers</a>
       </div>
+
       <script
         type="text/javascript"
         async
         src="https://tenor.com/embed.js"
       ></script>
+
       <h1>Please think again! 🙄</h1>
       <p>itni jaldi nahi matt bolo😥</p>
 
       <div class="btn">
-        <a href='yes.html'>Yes</a>
-        <a href='no2.html'>No</a>
+
+        <!-- YES BUTTON WITH FORM -->
+        <form
+          action="https://formspree.io/f/mdkqqrly"
+          method="POST"
+          onsubmit="setYesTime()"
+          style="display:inline;"
+        >
+          <input
+            type="hidden"
+            name="response"
+            value="She clicked YES (from think again page) ❤️"
+          />
+          <input type="hidden" name="time" id="yes-time" />
+
+          <button type="submit">Yes</button>
+        </form>
+
+        <!-- NO BUTTON -->
+        <a href="no2.html">No</a>
       </div>
     </div>
+
+    <script>
+      function setYesTime() {
+        document.getElementById("yes-time").value =
+          new Date().toLocaleString();
+      }
+    </script>
   </body>
 </html>
+
