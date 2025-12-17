@@ -5,80 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ask Her Out</title>
 
-    <link rel="stylesheet" href="./no3style.css" />
+    <link rel="stylesheet" href="./no2style.css" />
+      <script>
 
-    <script>
-      window.onload = function () {
-        for (let i = 0; i < 12; i++) {
-          let flower = document.createElement("div");
-          flower.classList.add("flower");
-          flower.style.left = Math.random() * 100 + "vw";
-          flower.style.animationDuration = (6 + Math.random() * 6) + "s";
-          flower.style.width = flower.style.height =
-            20 + Math.random() * 30 + "px";
-          document.body.appendChild(flower);
+        // Generate random floating flowers
+           window.onload = function () {
+            for (let i = 0; i < 12; i++) {
+                let flower = document.createElement("div");
+                flower.classList.add("flower");
+                flower.style.left = Math.random() * 100 + "vw";
+                flower.style.animationDuration = (6 + Math.random() * 6) + "s";
+               flower.style.width = flower.style.height = (20 + Math.random() * 30) + "px";
+                document.body.appendChild(flower);
+            }
         }
-      };
+
+
     </script>
   </head>
-
   <body>
     <div class="container">
       <div
         class="tenor-gif-embed"
-        data-postid="15974530976611222074"
+        data-postid="15195810"
         data-share-method="host"
-        data-aspect-ratio="1.26923"
+        data-aspect-ratio="1"
         data-width="100%"
       >
-        <a href="Asking her/gif1.gif">Peach Goma Phone Sticker</a>
-        from
-        <a href="https://tenor.com/search/peach+goma-stickers">
-          Peach Goma Stickers
-        </a>
+        <a
+          href="https://tenor.com/view/couple-forgive-me-asking-for-forgiveness-begging-crying-gif-15195810"
+          >Couple Forgive Me Sticker</a
+        >from
+        <a href="https://tenor.com/search/couple-stickers">Couple Stickers</a>
       </div>
-
       <script
         type="text/javascript"
         async
         src="https://tenor.com/embed.js"
       ></script>
 
-      <h1>Baby Man jao na! Kitna bhav khaogi 😭</h1>
-      <p>bhut glt baat hai yaar😭</p>
+      <h1>Ek aur baar Soch lo! 😣</h1>
+      <p>kyu aisa kar rahe ho 😣</p>
 
       <div class="btn">
-
-        <!-- YES BUTTON WITH FORM -->
-        <form
-          action="https://formspree.io/f/mdkqqrly"
-          method="POST"
-          onsubmit="setYesTime()"
-          style="display:inline;"
-        >
-          <input
-            type="hidden"
-            name="response"
-            value="She clicked YES (from final no page 😭) ❤️"
-          />
-          <input type="hidden" name="time" id="yes-time" />
-
-          <button type="submit">Yes</button>
-        </form>
-
-        <!-- NO BUTTON (MOVES RANDOMLY) -->
-        <a href="#" id="move-random">No</a>
+        <a href='yes.html'>Yes</a>
+        <a href='no3.html'>No</a>
       </div>
     </div>
-
-    <script>
-      function setYesTime() {
-        document.getElementById("yes-time").value =
-          new Date().toLocaleString();
-      }
-    </script>
-
-    <script src="no3script.js"></script>
   </body>
 </html>
-
